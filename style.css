@@ -1,1 +1,17 @@
-
+body{
+  background-color: #2c2f33;
+  font-family: system-ui;
+  font-size: 16px;
+  margin: auto;
+  max-width: 1000px;
+}
+h2{
+  color: #7289da;
+  padding: 100px;
+}
+p, ol, ul{
+  color: #99aab5;
+}
+a{
+  color: #ffffff;
+}
