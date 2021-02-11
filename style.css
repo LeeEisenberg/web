@@ -6,12 +6,12 @@ body{
   max-width: 1000px;
 }
 h2{
-  color: #7289da;
-  padding: 100px;
+  color: #99aab5;
+  padding: 10px;
 }
 p, ol, ul{
-  color: #99aab5;
-}
-a{
   color: #ffffff;
+}
+h1, a{
+  color: #7289da;
 }
