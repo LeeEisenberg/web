@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+      <link rel="stylesheet" href="css.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,200&amp;family=Oswald&amp;display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="https://cdn.icon-icons.com/icons2/2699/PNG/512/minecraft_logo_icon_168974.png">
+    <title>Random Minecraft Bonanza!</title>
+  </head>
+  <body>
+    <div class="topnav">
+      <nav>
+      <a class="active">Final Project  </a>
+      <a id="c" class="active">Lee Eisenberg, Jesse Ding    </a>
+      </nav>
+</div>
+<div class="bkgr">
+  <div class="tctt">
+  <h1 class="bb">Random Minecraft Bonanza!</h1>
+<div class="shott">
+<br>
+  <p class="txt"> Minecraft is the most widely sold video game of all time. With over 200 million copies sold across all platforms, the influence and impact that Minecraft carries and produces are unfathomable. Like each Minecraft world, there are infinite topics to analyze. In this project, we will generate Markov sentences using content from Minecraft's website, do data analysis regarding bug fixes and changes over time, and will be answering the following questions: </p><ul>
+      <p></p>
+      <ul class="txt">
+      <li>Which released snapshot brought the most changes to the game? How has the trend of new changes added over time?</li>
+      <br>
+      <li>Which snapshot fixed the most bugs? How has the trend of bug fixes changed over time?</li>
+      <br>
+      <li>Most importantly... which type of Minecraft block are you?</li>
+      <br>
+    </ul>
+	 <p class="txt"> To make our project possible, we imported the Python modules urlopen and madplotlib. </p>
+<br>
+    </ul></div>
+</div>
+</div>
+
+<h2 class="how">Generated Markov Sentences</h2>
+<div class="chain">
+    <div class="textb">
+<p> This stage of the project is when we used urllib, which is a Python module that allows for Python to retrieve data from the internet. We then imported the urlopen function. urllib and urlopen allow us to efficiently obtain website data from the internet, where we can then use the data we collected to run it through the Markov code. This is what the program generated: <p>
+<p>This week's snapshot introduces some changes to redstone wire and fixed a bunch of bugfixes.<br /></p>
+<h1>Changes in Snapshot 20w17a</h1>
+<li>Added an Entity Distance scale option ranging from 50% to 500%</li>
+<li>Difficulty and game rules can now also be pushed onto it by a dripping stalactite. Same thing if there is air or a stalagmite from below</li>
+<h1>Changes to the Preview</h1>
+<li>Improved Smithing Table UI</li>
+<li>Ruined Portals now spawn less frequently</li>
+<li>Renamed &quot;Soul Fire Torch&quot; and &quot;Soul Lantern&quot;</li>
+<li>Tweaked Bastion Remnant loot</li>
+<li>Walls now create posts under more things, like pressure plates and banners</li>
+<li>The &quot;Singleplayer&quot; button will jump directly to &quot;Create World&quot; screen if there are no worlds to select</li>
+<h1>Technical Changes in 20w17a</h1>
+<h1>Fixed Bugs in 20w17a</h1>
+<li>Chat component style can now get up to Bad Omen 5, and you only get 1 Bad Omen 5. A higher level of the Village after successfully defending your village from a raid! The level of bad omen means a higher chance that the enemies you face will have enchanted weapons.</li>
+<li>Block storage format in <span class="bedrock-server">server.properties</span>. When this option is used, players will be relative to current damage. If <span class="bedrock-server">false</span>, level will be saved to a zip file in debug/profiling/&lt;yyyy-MM-dd_HH.mm.ss&gt;.zip and could be used in same places as random number generators.</li>
+<li>Full range of value.</li>
+<li>Added the <span class="bedrock-server">/item</span>
+</p>
+
+    </div>
+</div>
+
+  <h2 class="how"><b></b> Changes Released in Each Snapshot Over Time</h2>
+  <div class="chain">
+<div class="textb">
+  <p> How did our program work? The beginning of each bug fixes and changes section starts with the &lt;li&gt; HTML tag, thus, we used our website parsing code (which also uses urllib) to count the number of &lt;li&gt; tags. We then used the Python module madplotlib to create visuals. </p>
+<ul>
+    Main Takeaways
+    <li> In the later snapshots, there were a lot more changes added more frequently and evenly. In the earlier snapshots, such as 17, it wasn't guaranteed that each snapshot update would have changes added. However, in snapshot 21s, each update would have a higher chance of having changes added to the game.</li>
+    <li>Snapshot 21s had the most changes, whereas snapshot 17s had the least changes.</li>
+  </ul>
+  </div>
+<img class="img1" src="changes.png" alt="changes" width="800" height="400">
+</div>
+
+<h2 class="how">Number of Bugs Changed in Each Snapshot Over Time</h2>
+<div class="chain">
+    <img src="bugs.png" alt="Bugs" width="800" height="400">
+    <div class="textb">
+		<ul>
+		    Main Takeaways
+		    <li> As more modern versions of the game began to come out, more bugs fixes were implemented into the game. There is an upwards trend of bug fixes throughout the snapshots, and it peaks around the snapshot 20s. </li>
+		    <li>Snapshot 20s had the most bug fixes, whereas snapshot 17s had the least bug fixes.</li>
+		  </ul>
+
+</div>
+</div>
+<h2 class="how">Which Minecraft Block Are You?</h2>
+<div class="chain">
+    <div class="textb">
+<p id="ls" class="chain2"> To find which Minecraft block you are, click
+<a href="https://www.beano.com/posts/which-minecraft-block-are-you">here!</a></p>
+<p id="ls" class="chain2"> According to the quiz, Lee is a Jungle Wood Block and Jesse is a Lava Block! </p>
+
+    </div>
+</div>
+<h2 class="how">Our Program!</h2>
+<div class="chain">
+    <div class="textb">
+<p> #WARNING, when you run this code for the first time, it parses a lot of webpages, processes them, and creates several files: it does this so it doesn't have to parse webpages for each run. This means that the first run will take a long time to complete, but will take much less time in the subsequent runs. </p>
+<p><pre> <code> 
+
+from urllib.request import urlopen
+import random
+
+introdic = {}
+changes1dic = {}
+changes2dic = {}
+technicaldic = {}
+bugsdic = {}
+
+def strToDic(string,dictionary):
+    string = string.replace('{',' ').strip('}').replace('],',']|').split('|')
+    for x in string:
+        if x[x.find("["):].count(", ") == 0:
+            dictionary[x[x.find(" ")+2:x.find(":")-1]] = [x[x.find("[")+2:x.find("]")-1]]
+        else:
+            addon = []
+            for n in range(0,x[x.find("["):].count(", ")):
+                addon += [x[x.find("[")+2:x.find(", ")-1]]
+                x = x.replace(x[x.find("[")+2:x.find("',")+3],'')
+            addon += [x[x.find("[")+2:x.find("]")-1]]
+            dictionary[x[x.find(" ")+2:x.find(":")-1]] = addon
+
+def scrapeIt():
+    changeslist = []
+    bugslist = []
+    for n in range (17,22):
+        print(n)
+        for w in range (1,53):
+            url = 'https://www.minecraft.net/en-us/article/minecraft-snapshot-'+str(n)+'w'+str(w)+'a'
+            try:
+                page = urlopen(url)
+            except:
+                continue
+            htmlCode = page.read()
+            html = htmlCode.decode("utf-8")
+    
+            start = html.find('&lt;p>')
+            text = html[start:html[start:].find('&lt;/div>')+len(html[0:start])]
+
+            sort = text.replace('&lt;ul>','').replace('&lt;/ul>','').replace('\n\n','\n').strip('\n').replace('&lt;h1','|&lt;h1').replace('/h1>','/h1>|')
+            sort = sort.split('|')
+            b = 0
+            print(sort)
+            intro = ''
+            try:
+                if sort[b][1] == 'p':
+                    intro = sort[b]
+                else:
+                    b -= 2
+            except:
+                pass
+            b += 2
+            changes1 = ''
+            try:
+                if 'l' in sort[b][0:8]:
+                    changes1 = sort[b]
+                else:
+                    b -= 2
+            except:
+                pass
+            b += 2
+            changes2 = ''
+            try:
+                if 'l' in sort[b][0:8]:
+                    changes2 = sort[b]
+                else:
+                    b -= 2
+            except:
+                pass
+            b += 2
+            technical = ''
+            try:
+                if 'p' in sort[b][0:8]:
+                    technical = sort[b]
+                else:
+                    b -= 2
+            except:
+                pass
+            b += 2
+            bugs = ''
+            try:
+                if 'l' in sort[b][0:8]:
+                    bugs = sort[b]
+            except:
+                pass
+            
+            version = str(n)+'w'+str(w)+'a'
+            changeslist += [[version,str(changes1.count('&lt;l')+changes2.count('&lt;l'))]]
+            bugslist += [[version,str(bugs.count('&lt;l'))]]
+            
+            
+            try:
+                x = intro
+                d = introdic
+                x = x.replace('--',' ').split()
+                for y in range(0,len(x)-2):
+                    markov = x[y] + ' ' + x[y+1]
+                    if markov in d:
+                        d[markov] += [x[y+2]]
+                    else:
+                        d[markov] = [x[y+2]]
+            except:
+                pass
+            
+            try:
+                x = changes1
+                d = changes1dic
+                x = x.replace('--',' ').split()
+                for y in range(0,len(x)-2):
+                    markov = x[y] + ' ' + x[y+1]
+                    if markov in d:
+                        d[markov] += [x[y+2]]
+                    else:
+                        d[markov] = [x[y+2]]
+            except:
+                pass
+        
+            try:
+                x = changes2
+                d = changes2dic
+                x = x.replace('--',' ').split()
+                for y in range(0,len(x)-2):
+                    markov = x[y] + ' ' + x[y+1]
+                    if markov in d:
+                        d[markov] += [x[y+2]]
+                    else:
+                        d[markov] = [x[y+2]]
+            except:
+                pass
+        
+            try:
+                x = technical
+                d = technicaldic
+                x = x.replace('--',' ').split()
+                for y in range(0,len(x)-2):
+                    markov = x[y] + ' ' + x[y+1]
+                    if markov in d:
+                        d[markov] += [x[y+2]]
+                    else:
+                        d[markov] = [x[y+2]]
+            except:
+                pass
+        
+            try:
+                x = bugs
+                d = bugsdic
+                x = x.replace('--',' ').split()
+                for y in range(0,len(x)-2):
+                    markov = x[y] + ' ' + x[y+1]
+                    if markov in d:
+                        d[markov] += [x[y+2]]
+                    else:
+                        d[markov] = [x[y+2]]
+            except:
+                pass
+
+    for x in [introdic,changes1dic,changes2dic,technicaldic,bugsdic]:
+        for y in ['introdic','changes1dic','changes2dic','technicaldic','bugsdic']:
+            enc = str(x).encode('utf-8')
+            f = open(y+'.txt','wb')
+            f.write(enc)
+            f.close()
+            
+    enc = str(introdic).encode('utf-8')
+    f = open('introdic.txt','wb')
+    f.write(enc)
+    f.close()
+    
+    enc = str(changes1dic).encode('utf-8')
+    f = open('changes1dic.txt','wb')
+    f.write(enc)
+    f.close()
+    
+    enc = str(changes2dic).encode('utf-8')
+    f = open('changes2dic.txt','wb')
+    f.write(enc)
+    f.close()
+    
+    enc = str(technicaldic).encode('utf-8')
+    f = open('technicaldic.txt','wb')
+    f.write(enc)
+    f.close()
+    
+    enc = str(bugsdic).encode('utf-8')
+    f = open('bugsdic.txt','wb')
+    f.write(enc)
+    f.close()
+            
+    f = open('changeslist.txt','w')
+    f.write(str(changeslist))
+    f.close()
+    
+    f = open('bugslist.txt','w')
+    f.write(str(bugslist))
+    f.close()
+    
+
+
+try:
+    with open('introdic.txt', 'r', encoding='utf-8') as file:
+        introdicstr = file.read()
+        file.close()
+    with open('changes1dic.txt', 'r', encoding='utf-8') as file:
+        changes1dicstr = file.read()
+        file.close()
+    with open('changes2dic.txt', 'r', encoding='utf-8') as file:
+        changes2dicstr = file.read()
+        file.close()
+    with open('technicaldic.txt', 'r', encoding='utf-8') as file:
+        technicaldicstr = file.read()
+        file.close()
+    with open('bugsdic.txt', 'r', encoding='utf-8') as file:
+        bugsdicstr = file.read()
+        file.close()
+except:
+    scrapeIt()
+    with open('introdic.txt', 'r', encoding='utf-8') as file:
+        introdicstr = file.read()
+        file.close()
+    with open('changes1dic.txt', 'r', encoding='utf-8') as file:
+        changes1dicstr = file.read()
+        file.close()
+    with open('changes2dic.txt', 'r', encoding='utf-8') as file:
+        changes2dicstr = file.read()
+        file.close()
+    with open('technicaldic.txt', 'r', encoding='utf-8') as file:
+        technicaldicstr = file.read()
+        file.close()
+    with open('bugsdic.txt', 'r', encoding='utf-8') as file:
+        bugsdicstr = file.read()
+        file.close()
+
+introdic = {}
+changes1dic = {}
+changes2dic = {}
+technicaldic = {}
+bugsdic = {}
+strToDic(introdicstr,introdic)
+strToDic(changes1dicstr,changes1dic)
+strToDic(changes2dicstr,changes2dic)
+strToDic(technicaldicstr,technicaldic)
+strToDic(bugsdicstr,bugsdic)
+
+html = ''
+while html == '':
+    snap = 'https://www.minecraft.net/en-us/article/minecraft-snapshot-'+str(random.randrange(17,22))+'w'+str(random.randrange(1,53))+'a'
+    try:
+        html = urlopen(snap)
+    except:
+        continue
+html = html.read()
+html = html.decode("utf-8")
+print(html)
+start = html.find('&lt;p>')
+text = html[start:html[start:].find('&lt;/div>')+len(html[0:start])]
+
+sort = text.replace('&lt;ul>','').replace('&lt;/ul>','').replace('\n\n','\n').strip('\n').replace('&lt;h1','|&lt;h1').replace('/h1>','/h1>|')
+sort = sort.split('|')
+b = 0
+intro = ''
+try:
+    if sort[b][1] == 'p':
+        intro = sort[b]
+    else:
+        b -= 2
+except:
+    pass
+b += 2
+changes1 = ''
+try:
+    if 'l' in sort[b][0:8]:
+        changes1 = sort[b]
+    else:
+        b -= 2
+except:
+    pass
+b += 2
+changes2 = ''
+try:
+    if 'l' in sort[b][0:8]:
+        changes2 = sort[b]
+    else:
+        b -= 2
+except:
+    pass
+b += 2
+technical = ''
+try:
+    if 'p' in sort[b][0:8]:
+        technical = sort[b]
+    else:
+        b -= 2
+except:
+    pass
+b += 2
+bugs = ''
+try:
+    if 'l' in sort[b][0:8]:
+        bugs = sort[b]
+except:
+    pass
+
+introtemp = []
+intro = intro.split()
+e = intro[0] + ' ' + intro[1]
+introtemp += [e]
+
+try:
+    changes1temp = []
+    changes1 = changes1.strip('\n').split('\n')
+    for x in changes1:
+        x = x.split()
+        e = x[0] + ' ' + x[1]
+        changes1temp += [e]
+except:
+    pass
+
+try:
+    changes2temp = []
+    changes2 = changes2.strip('\n').split('\n')
+    for x in changes2:
+        x = x.split()
+        e = x[0] + ' ' + x[1]
+        changes2temp += [e]
+except:
+    pass
+
+try:
+    technicaltemp = []
+    technical = technical.split()
+    e = technical[0] + ' ' + technical[1]
+    technicaltemp += [e]
+except:
+    pass
+
+try:
+    bugstemp = []
+    bugs = bugs.strip('\n').split('\n')
+    for x in bugs:
+        x = x.split()
+        e = x[0] + ' ' + x[1]
+        bugstemp += [e]
+except:
+    pass
+
+site = ''
+for s in introtemp:
+    while s[-1] != '>':
+        last2 = s.split()[-2]+' '+s.split()[-1]
+        if last2 in introdic:
+            s += ' ' + random.choice(introdic[last2]).strip("'")
+        else:
+            s += '&lt;/p>'
+    s = s.replace('&lt;/li>','&lt;/p>')
+    s += '&lt;/p>'
+    site += s + '\n'
+
+site += '&lt;h1>Changes in Snapshot '+snap[-6:]+'&lt;/h1>\n'
+
+for s in changes1temp:
+    while s[-1] != '>':
+        last2 = s.split()[-2]+' '+s.split()[-1]
+        if last2 in changes1dic:
+            s += ' ' + random.choice(changes1dic[last2]).strip("'")
+        else:
+            s += '&lt;/p>'
+    s = s.replace('&lt;/p>','&lt;/li>')
+    site += s + '\n'
+    
+site += '&lt;h1>Changes to the Preview&lt;/h1>\n'
+
+for s in changes2temp:
+    while s[-1] != '>':
+        last2 = s.split()[-2]+' '+s.split()[-1]
+        if last2 in changes2dic:
+            s += ' ' + random.choice(changes2dic[last2]).strip("'")
+        else:
+            s += '&lt;/p>'
+    s = s.replace('&lt;/p>','&lt;/li>')
+    site += s + '\n'
+    
+site += '&lt;h1>Technical Changes in '+snap[-6:]+'&lt;/h1>\n'
+
+for s in technicaltemp:
+    while s[-1] != '>':
+        last2 = s.split()[-2]+' '+s.split()[-1]
+        if last2 in technicaldic:
+            s += ' ' + random.choice(technicaldic[last2]).strip("'")
+        else:
+            s += '&lt;/p>'
+    s = s.replace('&lt;/li>','&lt;/p>')
+    site += s + '\n'
+
+site += '&lt;h1>Fixed Bugs in '+snap[-6:]+'&lt;/h1>\n'
+
+for s in bugstemp:
+    while s[-1] != '>':
+        last2 = s.split()[-2]+' '+s.split()[-1]
+        if last2 in bugsdic:
+            s += ' ' + random.choice(bugsdic[last2]).strip("'")
+        else:
+            s += '&lt;/p>'
+    s = s.replace('&lt;/p>','&lt;/li>')
+    site += s + '\n'
+print(site)
+
+g = open('minecraftmarkov.html','w')
+g.write(site)
+g.close()
+
+
+
+
+
+		</code></pre>
+	</p>
+	<p>
+
+
+    </div>
+</div>
+</body></html>
